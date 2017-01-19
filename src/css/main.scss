@@ -1,0 +1,65 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+//@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+    background:#EFEFEF;
+
+
+}
+
+.gv-slice{
+	width:100%;
+
+}
+
+.gv-slice-main{
+	width: 100%;
+	background:#FFF;
+	max-width: 1300px;
+
+	margin:0 auto;
+
+}
+
+.gv-inner-left{
+	@include mq($from: mobile, $until: tablet) {
+                position: relative;
+                display:block;
+                width: 100%;
+                margin: 0 10px;
+                bottom: 0;
+            }
+
+    @include mq($from: tablet) {
+               
+                float:left;
+                margin: 0 10px;
+                width: 160px;
+            }
+
+    @include mq($from: desktop) {
+        		
+                width: 240px;
+            
+    }
+}
+
+.gv-inner-main{
+	 
+	width:100%;
+	max-width: 640px;
+
+	@include mq($from: tablet) {
+               margin: 0 10px;
+                float:left;
+
+            }
+}
